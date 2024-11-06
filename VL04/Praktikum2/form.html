@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Tutorial erstellen</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <img
+      src="assets/img/redghost.png"
+      alt="HTML Bild"
+      width="50"
+      height="50"
+    />
+      <h1>Web-Entwicklung</h1>
+    </header>
+    <h2>Neues Tutorial:</h2>
+    <nav>
+      <a href="list.html">Liste der Kategorien | </a>
+      <a href="tutorials/tutorialsHTML.html"
+        >Tutorials der Kategorie HTML |</a
+      >
+      <a href="tutorial/HTMLGrundkurs2.html">Details zum Tutorial Grundkurs 1 |</a>
+      <a href="form.html">Neues Tutorial erstellen</a>
+    </nav>
+    <br />
+    <form
+      action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php"
+      method="POST"
+    >
+      <fieldset>
+        <legend>Titel und Beschreibung</legend>
+        <label>
+          Titel:
+          <input
+            name="name"
+            type="text"
+            required
+            minlength="4"
+            maxlength="20"
+            pattern="[A-ZÄÖÜ][0-9A-Za-zÄÖÜäöüß\s]*"
+            autofocus
+            placeholder="HTML Grundkurs 1"
+          />
+        </label>
+        <br />
+        <label>
+          Beschreibung:<br />
+          <textarea
+            name="description"
+            cols="60"
+            rows="8"
+            minlength="40"
+            required
+            placeholder="Beschreibung eingeben"
+          ></textarea>
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Sprache und Kategorien</legend>
+        <label>
+          Sprache:
+          <select name="language">
+            <option value="de">Deutsch</option>
+            <option value="en">Englisch</option>
+            <option value="es">Spanisch</option>
+            <option value="fr">Französisch</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Kategorie(n):
+          <input
+            name="categories"
+            type="text"
+            required
+            pattern="^(?!.*,$)(?!.*,,)[^,]+(,[^,]+)*$"
+            placeholder="Kategorie eingeben"
+          />
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Dauer und Datum</legend>
+        <label>
+          Dauer:
+          <input
+            type="text"
+            name="duration"
+            required
+            pattern="(00:[2-9][0-9]|(0[0-9]|1[0-5]):[0-5][0-9])"
+            placeholder="MM:SS"
+            
+          />
+        </label>
+        <br />
+        <label>
+          Veröffentlichung(Datum):
+          <input name="date" type="date" required />
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Typ und Inhalt</legend>
+        <label>
+          Typ:
+          <select name="type">
+            <option value="text">Text-Tutorial</option>
+            <option value="video">Video-Tutorial</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Inhalt:
+          <input
+            type="text"
+            name="content"
+            placeholder="URL zum Text oder ein YouTube-Embed-Code"
+          />
+        </label>
+      </fieldset>
+      <p>
+        <button type="submit"><em>Hinzufügen!</em></button>
+      </p>
+    </form>
+    <aside>
+      <h3>Zusatzinformationen:</h3>
+      <ul>
+        <li>Neues Tutorial1</li>
+        <li>Neues Tutorial2</li>
+      </ul>
+    </aside>
+    <footer>
+      <small>&copy;2024 Alex</small>
+    </footer>
+  </body>
+</html>

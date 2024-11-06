@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Web-Entwicklung</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="assets/img/redghost.png"
+        alt="HTML Bild"
+        width="50"
+        height="50"
+      />
+      <h1>Web-Entwicklung</h1>
+      <nav>
+        <a href="list.html">Liste der Kategorien | </a>
+        <a href="tutorials/tutorialsHTML.html"
+          >Tutorials der Kategorie HTML |</a
+        >
+        <a href="tutorial/HTMLGrundkurs2.html"
+          >Details zum Tutorial Grundkurs 1 |</a
+        >
+        <a href="form.html">Neues Tutorial erstellen</a>
+      </nav>
+    </header>
+    <main>
+      <form
+        action="https://labs.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php"
+        method="GET"
+      >
+        <fieldset>
+          <legend>Suche</legend>
+          <p>
+            <label
+              >Titel:
+              <input
+                name="search"
+                type="text"
+                required
+                minlength="4"
+                maxlength="20"
+                pattern="[A-ZÄÖÜ][0-9A-Za-zÄÖÜäöüß\s]*"
+                autofocus
+                placeholder="HTML Grundkurs 1"
+            /></label>
+          </p>
+          <p>
+            <button type="submit"><em>Suchen!</em></button>
+          </p>
+        </fieldset>
+      </form>
+      <nav>
+        <ul>
+          <li>
+            <a href="tutorials/tutorialsHTML.html"
+              ><img
+                src="assets/img/HTMLBild.png"
+                alt="HTML Bild"
+                width="50"
+                height="50"
+              />HTML</a
+            >
+          </li>
+          <li>
+            <a href="tutorials/tutorialsCSS.html"
+              ><img
+                src="pictures/CSSBild.png"
+                alt="CSS Bild"
+                width="50"
+                height="50"
+              />CSS</a
+            >
+          </li>
+          <li>
+            <a href="tutorials/tutorialsJavaScript.html"
+              ><img
+                src="pictures/JSBild.png"
+                alt="Java Script Bild"
+                width="50"
+                height="50"
+              />JavaScript</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <aside>
+        <h3>Zusatzinformationen:</h3>
+        <ul>
+          <li>Neues Tutorial1</li>
+          <li>Neues Tutorial2</li>
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <small>&copy;2024 Alex</small>
+    </footer>
+  </body>
+</html>
